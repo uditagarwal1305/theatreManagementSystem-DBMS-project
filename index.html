@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Movie Insert</title>
+		
+	</head>
+	<body>
+        <div class="insertmovie">
+			<form action="{{ url_for('insertmovie') }}" method="post">
+                <label for="movie_id">
+					Movie Id:
+				</label>
+				<input type="text" name="movie_id" placeholder="Movie ID" id="movie_id" required>
+                <br>
+                <label for="movie_name">
+					Movie Name:
+				</label>
+				<input type="text" name="movie_name" placeholder="Movie name" id="movie_name" required>
+				<br>
+                <label for="duration">
+					Duration:
+				</label>
+				<input type="text" name="duration" placeholder="Duration" id="duration" required>
+                <br>
+                
+                <label for="movie_type">
+					Movie Type:
+				</label>
+				<input type="text" name="movie_type" placeholder="Movie type" id="movie_type" required>
+                <br>
+
+                <label for="description">
+					Description:
+				</label><br>
+                <textarea rows = "5" cols = "50" name = "description" >Enter description here...
+                </textarea>
+                <br>
+                <label for="hall_id">
+					Hall ID:
+				</label>
+				<input type="text" name="hall_id" placeholder="Hall ID" id="hall_id" required>
+				<br>
+				<label for="show_time">
+					Show Time:
+				</label>
+				<input type="text" name="show_time" placeholder="Show Time" id="show_time" >
+				<br>
+				<div class="msg">{{ msg }}</div>
+				<input type="submit" value="Insert Movie">
+			</form>
+
+		</div>
+	</body>
+</html>
